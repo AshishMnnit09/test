@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <p href="" id="panel1" class="panel" onclick="handleClass('panel1')">hello1</p>
+      <p href="" id="panel2" class="panel" onclick="handleClass('panel2')">hello2</p>
+      <p href="" id="panel3" class="panel" onclick="handleClass('panel3')">hello3</p>
+      <p href="" id="panel4" class="panel" onclick="handleClass('panel4')">hello4</p>
+      <p href="" id="panel5" class="panel" onclick="handleClass('panel5')">hello5</p>
+      <script>
+        // function handleClass(_id) {
+        //   var menu = document.querySelector('#'+_id)
+        //   menu.classList.toggle('hidden-phone');
+        //   console.log("ashish")
+        // }
+
+
+
+        for (let i = 0; i < ele.length; i++) {
+          ele[i].addEventListener("click", function (event) {
+            ele[1].classList.remove("open");
+            for (let j = 0; j < ele.length; j++) {
+              if (ele[j].classList.contains("open")) {
+                ele[j].classList.remove("open");
+              }
+            }
+            event.preventDefault();
+            ele[i].classList.toggle("open");
+
+            // if (ele[i].classList.contains("open")) {
+            //   console.log("ll");
+            //   ele[i].classList.remove("open");
+            // } else {
+            //   console.log("kk");
+            //   ele[i].classList.add("open");
+            // }
+          });
+        }
+      </script>
+    </div>
+  </body>
+  <style type="text/css">
+    .open{
+      border: 4px solid green;
+    }
+  </style>
+</html>
